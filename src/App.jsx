@@ -50,6 +50,13 @@ const App = () => {
       userMonth += 12;
       console.log(userMonth);
     }
+    if (userYear < 0) {
+      setError({
+        year: "must be a valid date",
+        month: "must be a valid date",
+        day: "must be a valid date",
+      });
+    }
 
     return setAge({
       year: userYear,
